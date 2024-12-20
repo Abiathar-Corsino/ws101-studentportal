@@ -1,0 +1,20 @@
+[
+  {
+    "student_id": 1,
+    "subject": "Math",
+    "grade": "1.75",
+    "semester": "Fall 2024"
+  },
+  {
+    "student_id": 1,
+    "subject": "History",
+    "grade": "1.50",
+    "semester": "Fall 2024"
+  },
+  {
+    "student_id": 2,
+    "subject": "Math",
+    "grade": "1.25",
+    "semester": "Fall 2024"
+  }
+]
