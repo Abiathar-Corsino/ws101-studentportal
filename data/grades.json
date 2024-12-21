@@ -71,4 +71,22 @@
     "grade": "1.75",
     "semester": "1st"
   }
+   {
+    "student_id": 5,
+    "subject": "Math",
+    "grade": "1.75",
+    "semester": "1st"
+  },
+  {
+    "student_id": 5,
+    "subject": "History",
+    "grade": "1.50",
+    "semester": "1st"
+  },
+  {
+    "student_id": 5,
+    "subject": "Math",
+    "grade": "1.25",
+    "semester": "1st"
+  }
 ]
