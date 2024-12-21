@@ -3,18 +3,54 @@
     "student_id": 1,
     "subject": "Math",
     "grade": "1.75",
-    "semester": "Fall 2024"
+    "semester": "1st"
   },
   {
     "student_id": 1,
     "subject": "History",
     "grade": "1.50",
-    "semester": "Fall 2024"
+    "semester": "1st"
+  },
+  {
+    "student_id": 1,
+    "subject": "Math",
+    "grade": "1.25",
+    "semester": "1st "
+  },
+  {
+    "student_id": 2,
+    "subject": "Math",
+    "grade": "1.75",
+    "semester": "1st"
+  },
+  {
+    "student_id": 2,
+    "subject": "History",
+    "grade": "1.50",
+    "semester": "1st"
   },
   {
     "student_id": 2,
     "subject": "Math",
     "grade": "1.25",
-    "semester": "Fall 2024"
+    "semester": "1st"
+  },
+  {
+    "student_id": 3,
+    "subject": "Math",
+    "grade": "1.75",
+    "semester": "1st"
+  },
+  {
+    "student_id": 3,
+    "subject": "History",
+    "grade": "1.50",
+    "semester": "1st"
+  },
+  {
+    "student_id": 3,
+    "subject": "Math",
+    "grade": "1.25",
+    "semester": "1st"
   }
 ]
