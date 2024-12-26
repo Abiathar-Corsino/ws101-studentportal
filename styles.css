@@ -1,20 +1,22 @@
-/* General Reset */
+/* Overall body reset */
 body {
+  padding: 0;
   margin: 0;
   font-family: Arial, sans-serif;
-  overflow-x: hidden; /* Prevent horizontal scrolling */
+  overflow-x: hidden;
 }
 
+/* Flex container for the whole page */
 .clearance-body {
   font-family: Arial, sans-serif;
   display: flex;
   justify-content: flex-start;
-  padding: 20px;
+  padding: 0;
 }
 
+/* Clearance section styling */
 .clearance-section {
   font-size: 1.2em;
-  padding: 20px;
   background-color: #f4f4f4;
   border-radius: 8px;
   margin-top: 20px;
@@ -28,36 +30,41 @@ body {
   font-weight: bold;
 }
 
-/* Login Page */
-.login-body {
+/* Login Body - Centered Login Page */
+.login-body,
+.register-body {
   display: flex;
   justify-content: center;
-  flex-direction: column;
   align-items: center;
   height: 100vh;
   background-color: #f4f4f4;
 }
 
-.login-container {
+/* Login and Register Container */
+/* Login and Register Container */
+.login-container,
+.register-container {
   align-items: center;
   display: flex;
-  flex: 1;
   flex-direction: column;
   background: white;
-  padding: 20px;
+  width: 300px; /* Ensures both containers are the same width */
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   text-align: center;
+  padding: 20px; /* Optional: Adding some padding for better spacing */
 }
-.footer{
-  margin-top: 20px;
-  text-align: center;
-}
-.login-container h1 {
+
+/* Login Form Styling */
+.login-container h1,
+.register-container h1 {
   margin-bottom: 20px;
 }
 
-.login-container input {
+.login-container input,
+.register-container input,
+.login-container button,
+.register-container button {
   width: 80%;
   padding: 10px;
   margin: 10px 0;
@@ -65,17 +72,16 @@ body {
   border-radius: 5px;
 }
 
-.login-container button {
-  width: 80%;
-  padding: 10px;
+.login-container button,
+.register-container button {
   background-color: #007bff;
   color: white;
   border: none;
-  border-radius: 5px;
   cursor: pointer;
 }
 
-.login-container button:hover {
+.login-container button:hover,
+.register-container button:hover {
   background-color: #0056b3;
 }
 
@@ -84,13 +90,14 @@ body {
   margin-top: 10px;
 }
 
-/* Dashboard */
+/* Sidebar and Main Content Layout (Dashboard) */
 .dashboard-body {
   display: flex;
   height: 100vh;
-  flex-direction: row; /* Ensure the sidebar and content are in a row */
+  flex-direction: row; /* Ensure sidebar and content are in a row */
 }
 
+/* Sidebar Styling */
 .sidebar {
   width: 250px;
   background-color: #343a40;
@@ -101,11 +108,13 @@ body {
   height: 100vh; /* Sidebar full height */
 }
 
+/* Sidebar header */
 .sidebar h2 {
   text-align: center;
   margin-bottom: 20px;
 }
 
+/* Sidebar Links */
 .sidebar ul {
   list-style: none;
   padding: 0;
@@ -129,13 +138,16 @@ body {
   background-color: #495057;
 }
 
+/* Main Content Styling (Profile) */
 .main-content {
   flex: 1;
   padding: 20px;
   background-color: #f8f9fa;
   overflow-y: auto; /* Allow scrolling if content exceeds view height */
+  max-height: 100vw;
 }
 
+/* Header inside main content */
 header {
   background: #007bff;
   color: white;
@@ -144,17 +156,15 @@ header {
   margin-bottom: 20px;
 }
 
-header h1 {
-  margin: 0;
-}
-
+/* Table Styling */
 table {
   width: 100%;
   border-collapse: collapse;
   margin-top: 20px;
 }
 
-table th, table td {
+table th,
+table td {
   border: 1px solid #ddd;
   padding: 10px;
   text-align: left;
@@ -173,72 +183,108 @@ table tr:hover {
   background-color: #e9ecef;
 }
 
-
-.login-body, .register-body {
-  font-family: Arial, sans-serif;
+/* Footer Styling */
+.footer {
+  margin-top: 60px;
+  text-align: center;
+}
+.profile-body {
+  display: flex;
+}
+/* Profile Image Container */
+.profile-image-container {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: #f0f0f0;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  background-color: #f4f4f4;
 }
 
-.login-container, .register-container {
-  background-color: #fff;
-  padding: 30px;
-  border-radius: 8px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-  width: 300px;
+.profile-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image covers the area properly */
 }
 
-h1 {
+/* Fallback if no image is available */
+.no-image-placeholder {
+  width: 100%;
+  height: 100%;
+  line-height: 100px; /* Vertically center the text */
+  background-color: #ccc; /* Placeholder background color */
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
   text-align: center;
+  border-radius: 50%;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .dashboard-body {
+    flex-direction: column; /* Stack the sidebar and main content vertically on smaller screens */
+  }
+
+  .sidebar {
+    width: 100%;
+    height: auto; /* Let the sidebar resize vertically */
+  }
+
+  .main-content {
+    padding: 10px;
+  }
+
+  .login-container,
+  .register-container {
+    width: 80%;
+  }
+  .profile-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+    padding: 20px;
+  }
+
+  .main-content {
+    width: 100%;
+    padding: 20px;
+  }
+}
+
+.form-group {
   margin-bottom: 20px;
 }
 
-/* Styles specific to the Register Form */
-.register-container {
-  background-color: #fff;
-  padding: 30px;
-  border-radius: 8px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-  width: 300px;
+.form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  font-size: 14px;
+  color: #333;
 }
 
-.register-container h1 {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.register-container form input,
-.register-container form button {
+.form-group input,
+.form-group textarea {
   width: 100%;
   padding: 10px;
-  margin: 10px 0;
+  border-radius: 5px;
   border: 1px solid #ccc;
-  border-radius: 4px;
+  font-size: 14px;
+  color: #333;
+  box-sizing: border-box;
 }
 
-.register-container form button {
-  background-color: #4CAF50;
-  color: white;
-  cursor: pointer;
-}
-
-.register-container form button:hover {
-  background-color: #45a049;
-}
-
-.register-container a {
-  color: #4CAF50;
-  text-decoration: none;
-}
-
-.register-container a:hover {
-  text-decoration: underline;
-}
-
-.register-container #register-error-message {
-  color: red;
-  text-align: center;
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #007bff;
+  outline: none;
 }
